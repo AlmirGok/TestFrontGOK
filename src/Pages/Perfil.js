@@ -59,31 +59,22 @@ function Users() {
             BtnEdit="True"
             tags="JavaScript"
           ></ListRepoUser>
-          <BoxModalAddTags>
-            <input
-              className="InputModal"
-              type="checkbox"
-              id="BoxModalAddTags"
-              name="scales"
-            />
-            <div className="BoxModal">
-              <ModalAddTags></ModalAddTags>
-            </div>
-          </BoxModalAddTags>
-          <BoxModalEditTags>
-            <input
-              className="InputModal"
-              type="checkbox"
-              id="BoxModalEditTags"
-              name="scales"
-            />
-            <div className="BoxModal">
-              <ModalEditTags></ModalEditTags>
-            </div>
-          </BoxModalEditTags>
+
           <div className="BottomMargin"></div>
         </section>
       </Content>
+      <BoxModalAddTags>
+        <input className="InputModal" type="checkbox" id="BoxModalAddTags" />
+        <div className="BoxModal">
+          <ModalAddTags></ModalAddTags>
+        </div>
+      </BoxModalAddTags>
+      <BoxModalEditTags>
+        <input className="InputModal" type="checkbox" id="BoxModalEditTags" />
+        <div className="BoxModal">
+          <ModalEditTags></ModalEditTags>
+        </div>
+      </BoxModalEditTags>
     </Container>
   );
 }
@@ -131,7 +122,7 @@ const Content = styled.div`
 `;
 const BoxModalAddTags = styled.div`
   input.InputModal {
-    display: none;
+    display: block;
   }
   input:checked + div.BoxModal {
     display: flex;
@@ -152,7 +143,7 @@ const BoxModalAddTags = styled.div`
 `;
 const BoxModalEditTags = styled.div`
   input.InputModal {
-    display: none;
+    display: block;
   }
   input:checked + div.BoxModal {
     display: flex;
