@@ -4,7 +4,6 @@ import Users from "./Pages/Users";
 import Perfil from "./Pages/Perfil";
 import React from "react";
 import { Button } from "./components";
-import "./App.css";
 
 function App() {
   return (

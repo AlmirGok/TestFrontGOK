@@ -70,11 +70,12 @@ export const HeaderWhite = styled.div`
   }
 `;
 export const ContainerPerfil = styled.div`
-  background-color: #fff;
+  background: #ededed;
   width: 300px;
 `;
 export const BoxOnePerfil = styled.div`
   overflow: hidden;
+  background: #fff;
   box-shadow: 0px 0px 4px #cdcdcd;
   padding-bottom: 12px;
   margin: 15px 15px 5px 15px;
@@ -127,6 +128,7 @@ export const BoxOnePerfil = styled.div`
 `;
 export const BoxTwoPerfil = styled.div`
   overflow: hidden;
+  background: #fff;
   box-shadow: 0px 0px 4px #cdcdcd;
   padding-bottom: 12px;
   margin: 15px 15px 5px 15px;
@@ -164,6 +166,7 @@ export const BoxTwoPerfil = styled.div`
 `;
 export const BoxTheePerfil = styled.div`
   overflow: hidden;
+  background: #fff;
   box-shadow: 0px 0px 4px #cdcdcd;
   padding-bottom: 12px;
   margin: 15px 15px 5px 15px;
@@ -221,7 +224,7 @@ export const ContainerInput = styled.div`
   }
 `;
 export const ContainerInputSeach = styled.div`
-  background-color: #fff;
+  background-color: transparent;
   height: 40px;
   width: calc(50% - 10px);
   position: relative;
