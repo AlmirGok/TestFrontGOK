@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { ContainerLogin } from "./Styles.js";
+import { ContainerLogin } from "./style.jsx";
 
 // Components
-import { Button, Input } from "../components";
+import { Button, Input } from "../../components";
 
 function Login() {
   return (
@@ -11,7 +11,7 @@ function Login() {
       <section className="ContentLogin">
         <div className="BoxLoginImput">
           <div>
-            <img src="/assets/logo.svg" />
+            <img alt="" src="/assets/logo.svg" />
           </div>
           <div>
             <p class="title">Buscar usuário</p>
@@ -28,7 +28,7 @@ function Login() {
         </div>
         <div className="BoxLoginArt">
           <div>
-            <img src="/assets/art.svg" />
+            <img img alt="" src="/assets/art.svg" />
           </div>
           <text>
             Gerencie e adicione <span>tags</span> ao seus{" "}

@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerListUser } from "./Styles.js";
+import { ContainerListUser } from "./style.jsx";
 
 const ListUser = ({ ProfilePicture, Name, Link, Company, Address, Stars }) => (
   <ContainerListUser>
@@ -7,7 +7,7 @@ const ListUser = ({ ProfilePicture, Name, Link, Company, Address, Stars }) => (
       <li>
         <div className="BoxInforStart">
           <div className="BoxImgPerfil">
-            <img src={ProfilePicture} />
+            <img alt="" src={ProfilePicture} />
           </div>
           <div className="BoxNome">
             <h3>

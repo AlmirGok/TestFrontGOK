@@ -4,7 +4,7 @@ import {
   BoxOnePerfil,
   BoxTwoPerfil,
   BoxTheePerfil,
-} from "./Styles.js";
+} from "./style.jsx";
 
 const InforPerfil = ({
   photo,
@@ -23,7 +23,7 @@ const InforPerfil = ({
     <BoxOnePerfil>
       <span></span>
       <div>
-        <img src={photo} />
+        <img  alt="" src={photo} />
       </div>
       <h1>{name}</h1>
       <h4>{link}</h4>
@@ -44,22 +44,22 @@ const InforPerfil = ({
       <h1>Sobre</h1>
       <h5>{sobre}</h5>
       <section>
-        <img src="assets/business.svg" />
+        <img alt="" src="assets/business.svg" />
         <p>{empresa}</p>
       </section>
       <section>
-        <img src="assets/place.svg" />
+        <img alt=""  src="assets/place.svg" />
         <p>{endereco}</p>
       </section>
       <section>
-        <img src="assets/link.svg" />
+        <img alt="" src="assets/link.svg" />
         <p>{site}</p>
       </section>
     </BoxTwoPerfil>
     <BoxTheePerfil>
       <h1>Destaque</h1>
       <section>
-        <img src="assets/bookmarks.svg" />
+        <img alt="" src="assets/bookmarks.svg" />
         <p>{destaque}</p>
       </section>
     </BoxTheePerfil>

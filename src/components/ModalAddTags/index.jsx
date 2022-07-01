@@ -1,7 +1,8 @@
 import React from "react";
-import { ContainerModalAddTags } from "./Styles.js";
+import { ContainerModalAddTags } from "./style.jsx";
 
-import { InputSeach, Button } from "../components";
+import InputSeach from "../InputSeach/index.jsx";
+import Button from "../Button";
 
 const ModalAddTags = ({ content }) => (
   <ContainerModalAddTags>
@@ -15,34 +16,34 @@ const ModalAddTags = ({ content }) => (
     <div className="BoxTags">
       <span> Sugestões </span>
       <div>
-        Java <img src="/assets/addTagsWhite.svg" />
+        Java <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        Phyton <img src="/assets/addTagsWhite.svg" />
+        Phyton <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        J.son <img src="/assets/addTagsWhite.svg" />
+        J.son <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        C# <img src="/assets/addTagsWhite.svg" />
+        C# <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        TypeScript <img src="/assets/addTagsWhite.svg" />
+        TypeScript <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        GraphQL <img src="/assets/addTagsWhite.svg" />
+        GraphQL <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        ReactJs <img src="/assets/addTagsWhite.svg" />
+        ReactJs <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        React Native <img src="/assets/addTagsWhite.svg" />
+        React Native <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        IOS <img src="/assets/addTagsWhite.svg" />
+        IOS <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
       <div>
-        Android <img src="/assets/addTagsWhite.svg" />
+        Android <img alt="" src="/assets/addTagsWhite.svg" />
       </div>
     </div>
     <div className="BoxBtn">

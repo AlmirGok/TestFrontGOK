@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { ContainerUsers } from "./Styles.js";
+import { ContainerUsers } from "./style.jsx";
 
 // Components
-import { ListUser, Header } from "../components";
+import { ListUser, Header } from "../../components";
 
 function Users() {
   return (
@@ -58,6 +58,5 @@ function Users() {
     </ContainerUsers>
   );
 }
-
 
 export default Users;

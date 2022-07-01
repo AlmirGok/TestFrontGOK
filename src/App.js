@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Login from "./Pages/Login";
-import Users from "./Pages/Users";
-import Perfil from "./Pages/Perfil";
+import Login from "./pages/Login";
+import Users from "./pages/Users";
+import Perfil from "./pages/Perfil";
 import React from "react";
 import { Button } from "./components";
 

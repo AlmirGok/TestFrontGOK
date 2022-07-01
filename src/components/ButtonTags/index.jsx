@@ -1,10 +1,10 @@
 import React from "react";
-import { BtnTags } from "./Styles.js";
+import { BtnTags } from "./style.jsx";
 
 const ButtonTags = ({ content, onClick, iconTags }) => (
   <BtnTags onClick={() => onClick()}>
     {content}
-    <img src={iconTags} />
+    <img alt="" src={iconTags} />
   </BtnTags>
 );
 

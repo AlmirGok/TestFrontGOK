@@ -1,10 +1,10 @@
 import React from "react";
-import { ContainerInputSeach } from "./Styles.js";
+import { ContainerInputSeach } from "./style.jsx";
 
 const InputSeach = ({ Placeholder, IconInput }) => (
   <ContainerInputSeach>
     <input placeholder={Placeholder}></input>
-    <img src={IconInput} />
+    <img alt="" src={IconInput} />
   </ContainerInputSeach>
 );
 

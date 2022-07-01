@@ -1,6 +1,7 @@
 import React from "react";
-import { ContainerRepoUser } from "./Styles.js";
-import { ButtonTags, Tags } from "../components";
+import { ContainerRepoUser } from "./style.jsx";
+import ButtonTags from "../ButtonTags";
+import Tags from "../Tags";
 
 const ListRepoUser = ({
   NameProject,
@@ -58,7 +59,7 @@ const ListRepoUser = ({
           </div>
           <div className="BoxDelete">
             <span>
-              <img src="/assets/star.svg" />
+              <img alt="" src="/assets/star.svg" />
             </span>
           </div>
         </div>

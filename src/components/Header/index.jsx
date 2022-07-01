@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from "../components";
-import { HeaderWhite } from "./Styles.js";
+import Button from "../Button";
+import { HeaderWhite } from "./style.jsx";
 
 const Header = ({ content, onClick }) => (
   <HeaderWhite>
     <div>
-      <img src="/assets/logo.svg" />
+      <img alt="" src="/assets/logo.svg" />
     </div>
     <div>
       <Button content="Adicionar novo" />

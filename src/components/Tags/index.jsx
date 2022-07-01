@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerTagsGray } from "./Styles.js";
+import { ContainerTagsGray } from "./style.jsx";
 
 const Tags = ({ tags, onClick, iconTags }) => (
   <ContainerTagsGray onClick={() => onClick()}>#{tags}</ContainerTagsGray>

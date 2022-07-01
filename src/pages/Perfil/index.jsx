@@ -8,8 +8,8 @@ import {
   InputSeach,
   ModalAddTags,
   ModalEditTags,
-} from "../components";
-import { ContainerPerfil } from "./Styles.js";
+} from "../../components";
+import { ContainerPerfil } from "./style.jsx";
 
 function Users() {
   return (
@@ -62,7 +62,7 @@ function Users() {
 
           <div className="BottomMargin"></div>
         </section>
-      </section>  
+      </section>
 
       <div className="BoxModalAddTags">
         <input className="InputModal" type="checkbox" id="BoxModalAddTags" />
@@ -79,8 +79,5 @@ function Users() {
     </ContainerPerfil>
   );
 }
-
-
- 
 
 export default Users;

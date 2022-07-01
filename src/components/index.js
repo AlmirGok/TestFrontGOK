@@ -6,7 +6,7 @@ import InforPerfil from "./InforPerfil";
 import ListRepoUser from "./ListRepoUser";
 import ButtonTags from "./ButtonTags";
 import Tags from "./Tags";
-import InputSeach from "./InputSeach";
+import InputSeach from "./InputSeach/index.jsx";
 import ModalAddTags from "./ModalAddTags";
 import ModalEditTags from "./ModalEditTags";
 

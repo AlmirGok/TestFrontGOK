@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { BtnBlack } from "./Styles.js";
+import { BtnBlack } from "./style.jsx";
 
 const Button = ({ content, onClick }) => (
   <BtnBlack onClick={() => onClick()}>{content}</BtnBlack>

@@ -1,10 +1,10 @@
 import React from "react";
-import { ContainerInput } from "./Styles.js";
+import { ContainerInput } from "./style.jsx";
 
 const Input = ({ content, onClick }) => (
   <ContainerInput>
     <input placeholder={content}></input>
-    <img src="/assets/account.svg" />
+    <img alt="" src="./assets/account.svg" />
   </ContainerInput>
 );
 
