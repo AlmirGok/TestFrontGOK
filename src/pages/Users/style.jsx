@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerUsers = styled.div`
   color: #fff;
-  background: #ededed;
+  background: #fdfdfd;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -10,7 +10,7 @@ export const ContainerUsers = styled.div`
   justify-content: center;
   align-items: center;
   section.ContentUsers {
-    background-color: #ebebeb;
+    background-color: #fdfdfd;
     box-shadow: 0px 0px 5px #b3b3b3;
     color: #fff;
     display: flex;
@@ -21,8 +21,7 @@ export const ContainerUsers = styled.div`
     height: 100%;
     .BoxScrollList {
       height: 100%;
-      width: calc(100% - 10%);
-      padding: 0px 5%;
+      width: 100%;
       padding-top: 20px;
       padding-bottom: 20px;
       overflow-y: scroll;

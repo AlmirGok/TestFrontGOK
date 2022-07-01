@@ -68,13 +68,13 @@ export const ContainerLogin = styled.div`
   div.BoxLoginArt {
     display: flex;
     height: 100%;
-    flex: 1;
+    flex: 1.4;
     background: black;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     div {
-      width: 100%;
+      height: 80%;
       display: flex;
       flex: 1;
       padding: 10px;
@@ -86,7 +86,8 @@ export const ContainerLogin = styled.div`
       padding: 10px 40px 30px 40px;
       color: #fff;
       text-align: center;
-      font-size: 18px;
+      width: 70%;
+      font-size: 30px;
       span {
         font-weight: bold;
       }
