@@ -30,7 +30,7 @@ export function Users({ props }) {
   }
   useEffect(() => {
     getRepos();
-  }, []);
+  }, [query]);
 
   const query = useQuery();
   const [searchText, setSearchText] = useState("");
