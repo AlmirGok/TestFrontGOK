@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ContainerLogin } from "./style.jsx";
+import { ContainerLogin, ContainerInput } from "./style.jsx";
 
 // Components
 import { Button, Input } from "../../components";
 
 function Login() {
+  const [searchText, setSearchText] = useState("");
+
   return (
     <ContainerLogin>
       <section className="ContentLogin">
@@ -16,9 +18,18 @@ function Login() {
           <div>
             <p class="title">Buscar usuário</p>
             <p class="infor">Crie sua conta através do seu usuário do GitHub</p>
-            <Input content="Email" />
 
-            <Link class="LinkPages" to="/Users">
+            <ContainerInput>
+              <input
+                value={searchText}
+                onChange={(e) => setSearchText(e.target.value)}
+                placeholder="Nome de usuario"
+                type={"text"}
+              ></input>
+              <img alt="" src="./assets/account.svg" />
+            </ContainerInput>
+
+            <Link class="LinkPages" to={`/Users?text=${searchText}`}>
               <Button content="Cadastrar" />
             </Link>
           </div>

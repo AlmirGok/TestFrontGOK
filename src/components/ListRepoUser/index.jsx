@@ -1,7 +1,7 @@
 import React from "react";
 import { ContainerRepoUser } from "./style.jsx";
-import ButtonTags from "../ButtonTags";
-import Tags from "../Tags";
+import ButtonTags from "../buttonTags";
+import Tags from "../tags";
 
 const ListRepoUser = ({
   NameProject,

@@ -1,4 +1,9 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import Api from "../../services/api";
+import { ContainerPerfil } from "./style.jsx";
+import Loading from "../../components/loading";
 
 // Components
 import {
@@ -8,23 +13,50 @@ import {
   ModalAddTags,
   ModalEditTags,
 } from "../../components";
-import { ContainerPerfil } from "./style.jsx";
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
+export { useQuery };
 
 function Users() {
+  const [removeLoading, setRemoveLoading] = useState(false);
+
+  async function getRepos() {
+    setRemoveLoading(true);
+  }
+  useEffect(() => {
+    getRepos();
+  }, []);
+
+  const query = useQuery();
+  const [user, setUser] = useState({});
+  const [repositories, setRepositories] = useState([]);
+
+  useEffect(() => {
+    Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
+    // Api.getByUsername(query.get("text")).then(res => console.log(res, "oii"));
+    Api.getReposByUsername(query.get("text")).then((res) =>
+      setRepositories(res.data)
+    );
+  }, []);
+
   return (
     <ContainerPerfil>
       <section className="ContentPerfil">
+        {!removeLoading && <Loading />}
         <InforPerfil
-          photo="assets/Perfil.png"
-          name="Rick Bone Junior"
-          link="@rickbonejr"
-          seguidores="109"
-          seguidor="56"
-          favoritos="8"
-          sobre="Desenvolvedor Javascript - React, React Native, Vue, TypeScript, GraphQL, Redux, NodeJS"
-          empresa="GO.K Digital"
-          endereco="São Paulo, Brazil"
-          site="rickbonejr.com.br"
+          photo={user.avatar_url}
+          name={user.name}
+          link={user.login}
+          seguidores={user.followers}
+          seguidor={user.following}
+          favoritos={user.public_repos}
+          sobre={user.bio}
+          empresa={user.company}
+          endereco={user.location}
+          site={user.blog}
           destaque="Developer Program Member"
         ></InforPerfil>
         <section className="BoxScrollList">
@@ -38,27 +70,22 @@ function Users() {
               IconInput="/assets/filter_list.svg"
             ></InputSeach>
           </header>
-          <ListRepoUser
-            NameProject="project-name-java"
-            Infor="Project application with component animations with React Native"
-            Linguagem="React Native"
-            Atualizacao="Atualizado a 2 dias atrás"
-            Stars="2"
-            Contas="6"
-            BtnAdd="True"
-          ></ListRepoUser>
-          <ListRepoUser
-            NameProject="project-name-java"
-            Infor="Project application with component animations with React Native"
-            Linguagem="React Native"
-            Atualizacao="Atualizado a 2 dias atrás"
-            Stars="2"
-            Contas="5"
-            TagsActive="True"
-            BtnEdit="True"
-            tags="JavaScript"
-          ></ListRepoUser>
 
+          {repositories.map((repo, index) => (
+            <div key={index}>
+              <ListRepoUser
+                NameProject={repo.name}
+                Infor={repo.description}
+                Linguagem={repo.language}
+                Atualizacao={repo.updated_at}
+                Stars={repo.stargazers_count}
+                Contas={repo.watchers_count}
+                BtnAdd="True"
+                BtnEdit="True"
+                TagsActive="True"
+              ></ListRepoUser>
+            </div>
+          ))}
           <div className="BottomMargin"></div>
         </section>
       </section>

@@ -1,8 +1,8 @@
 import React from "react";
 import { ContainerModalAddTags } from "./style.jsx";
 
-import InputSeach from "../InputSeach/index.jsx";
-import Button from "../Button";
+import InputSeach from "../inputSeach/index.jsx";
+import Button from "../button";
 
 const ModalAddTags = ({ content }) => (
   <ContainerModalAddTags>

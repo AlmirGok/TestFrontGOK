@@ -11,10 +11,13 @@ export const HeaderWhite = styled.div`
   position: relative;
   justify-content: space-between;
   div {
-    width: 150px;
+    width: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
+    a {
+      width: 100%;
+    }
     img {
       width: 110px;
     }

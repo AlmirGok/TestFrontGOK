@@ -6,8 +6,8 @@ export const BtnBlack = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  height: 40px;
+  font-size: 18px;
+  height: 50px;
   border: none;
   border-radius: 40px;
   cursor: pointer;

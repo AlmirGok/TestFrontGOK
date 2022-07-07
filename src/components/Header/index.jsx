@@ -1,6 +1,7 @@
 import React from "react";
-import Button from "../Button";
+import Button from "../button";
 import { HeaderWhite } from "./style.jsx";
+import { Link } from "react-router-dom";
 
 const Header = ({ content, onClick }) => (
   <HeaderWhite>
@@ -8,7 +9,9 @@ const Header = ({ content, onClick }) => (
       <img alt="" src="/assets/logo.svg" />
     </div>
     <div>
-      <Button content="Adicionar novo" />
+      <Link class="LinkPages" to="/">
+        <Button content="Adicionar novo" />
+      </Link>
     </div>
   </HeaderWhite>
 );
