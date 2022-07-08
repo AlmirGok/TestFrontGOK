@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Api from "../../services/api";
 import { ContainerPerfil } from "./style.jsx";
-import Loading from "../../components/loading";
 
 // Components
 import {
@@ -21,15 +20,6 @@ function useQuery() {
 export { useQuery };
 
 function Users() {
-  const [removeLoading, setRemoveLoading] = useState(false);
-
-  async function getRepos() {
-    setRemoveLoading(true);
-  }
-  useEffect(() => {
-    getRepos();
-  }, []);
-
   const query = useQuery();
   const [user, setUser] = useState({});
   const [repositories, setRepositories] = useState([]);
@@ -45,7 +35,6 @@ function Users() {
   return (
     <ContainerPerfil>
       <section className="ContentPerfil">
-        {!removeLoading && <Loading />}
         <InforPerfil
           photo={user.avatar_url}
           name={user.name}
