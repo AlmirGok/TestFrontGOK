@@ -15,19 +15,18 @@ function useQuery() {
 
 export { useQuery };
 
-export function Users({ props }) {
+export default function Users({ props }) {
   const query = useQuery();
   const [user, setUser] = useState({});
   const [setRepositories] = useState([]);
 
   useEffect(() => {
     Api.getByUsername(query.get("text")).then((res) => setUser(res.data));
-
     Api.getReposByUsername(query.get("text")).then((res) =>
       setRepositories(res.data)
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   return (
     <ContainerUsers>
       <section className="ContentUsers">
@@ -48,5 +47,3 @@ export function Users({ props }) {
     </ContainerUsers>
   );
 }
-
-export default Users;
