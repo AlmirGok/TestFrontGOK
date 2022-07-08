@@ -28,9 +28,6 @@ export function Users({ props }) {
     );
   }, []);
 
-  const getUser = () => {
-    // Api.getByUsername(searchText).then(res => setUsers([...user, res.data]));
-  };
   return (
     <ContainerUsers>
       <section className="ContentUsers">
